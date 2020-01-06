@@ -20,7 +20,5 @@ jobs:
       run: go get -v -t -d ./...
 
     - name: Test
-      run: | 
-          ./test.sh
-          bash <(curl -s https://codecov.io/bash)       
+      run: ./test.sh      
       
