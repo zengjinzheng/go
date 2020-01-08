@@ -20,5 +20,10 @@ jobs:
       run: go get -v -t -d ./...
 
     - name: Test
-      run: ./test.sh      
+      run: ./test.sh 
+    - name: Coveralls GitHub Action
+      uses: coverallsapp/github-action@v1.0.1
+      with:
+        github-token: ${{secrets.GHA_TOKEN}}
+        path-to-lcov: ./coverage/lcov.info   
       
